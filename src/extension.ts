@@ -39,8 +39,9 @@ export function activate(context: vscode.ExtensionContext) {
 			body: new URLSearchParams(content).toString()
 			 }).then((response) => {
 				if (response.status !== 200) {
-					const header = "Invalid Pastebin developer key";
-					const options: vscode.MessageOptions = { detail: "Please, set valid Pastebin developer key", modal: true};
+					const header = "Error";
+					const options: vscode.MessageOptions = { detail: "An unexpected problem has occurred. \
+					The following problems are possible: \n1) invalid developer key\n2) you have exceeded the limit", modal: true};
 					const ok: vscode.MessageItem = {title: "OK",  isCloseAffordance: true };
 					vscode.window.showInformationMessage(header, options, ok);
 				} else {

@@ -30,6 +30,13 @@
 
 			}
 		],
+    "menus": {
+      "editor/context": [{
+          "command": "pastebincode.pastebinCode",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste"
+    }]
+    },
 		"configuration": {
 			"title": "Pastebin extension",
 			"properties": {
